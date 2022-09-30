@@ -5,6 +5,7 @@ import {useIntl} from 'react-intl'
 import {PageTitle} from '../../../_metronic/layout/core'
 import Modal from 'react-bootstrap/Modal'
 import _ from 'lodash'
+import {Link} from 'react-router-dom'
 
 const UserProfile: FC = () => {
   const [show, setShow] = useState(false)
@@ -457,7 +458,7 @@ const UserProfile: FC = () => {
                 return (
                   <tr role='row' className='odd'>
                     <td tabIndex={0} className='sorting_1'>
-                      {data.name}
+                     <Link to="/user-detail"> {data.name}</Link>
                     </td>
                     <td> {data.phone}</td>
                     <td>{data.service_type}</td>
